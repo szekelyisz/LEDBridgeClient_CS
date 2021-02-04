@@ -1,0 +1,3 @@
+[submodule "proto/LEDBridge_proto"]
+	path = proto/LEDBridge_proto
+	url = https://github.com/szekelyisz/LEDBridge_proto.git
