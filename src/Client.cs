@@ -68,7 +68,8 @@ namespace LEDBridge
             {
                 group = new Group(groupId, name, length, cpp);
                 mGroups.Add(group.id, group);
-                GroupDiscovered(this, group);
+                EventHandler<Group> handler = GroupDiscovered;
+                if (handler != null) handler(this, group);
             }
             mGroupsLock.ReleaseMutex();
             return group;
@@ -107,7 +108,8 @@ namespace LEDBridge
             {
                 device = new Device(this, uuid, response.Source, deviceInfo.Name, response.RTT, deviceInfo.Outputs);
                 mDevices[uuid] = device;
-                DeviceDiscovered(this, device);
+                EventHandler<Device> handler = DeviceDiscovered;
+                if (handler != null) handler(this, device);
             }
 
             return device;
