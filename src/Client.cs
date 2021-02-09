@@ -53,6 +53,14 @@ namespace LEDBridge
             request.Send();
         }
 
+        public void clear()
+        {
+            mGroupsLock.WaitOne();
+            mDevices.Clear();
+            mGroups.Clear();
+            mGroupsLock.ReleaseMutex();
+        }
+
         public Group segmentDiscovered(uint groupId, string name, uint length, uint cpp)
         {
             mGroupsLock.WaitOne();
