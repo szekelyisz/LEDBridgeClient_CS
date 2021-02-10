@@ -22,7 +22,7 @@ namespace LEDBridge
             mName = name;
             mLength = length;
             mCpp = cpp;
-            mSocket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.IPv4);
+            mSocket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             mSocket.Connect(IPAddress.Parse($"239.255.{id / 255}.{id % 255}"), 5000);
         }
 
