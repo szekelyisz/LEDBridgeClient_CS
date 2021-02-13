@@ -16,6 +16,8 @@ namespace LEDBridge
         /* we need a lock otherwise responses from different devices will race */
         private System.Threading.Mutex mGroupsLock;
 
+        public Dictionary<uint, Group> Groups { get => mGroups; }
+
         public Client()
         {
             mDevices = new Dictionary<Guid, Device>();
