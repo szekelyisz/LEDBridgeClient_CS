@@ -123,7 +123,7 @@ namespace LEDBridge
             return device;
         }
 
-        public void processGroups(Device device)
+        private void processGroups(Device device)
         {
             foreach (Output output in device.Outputs)
             {
