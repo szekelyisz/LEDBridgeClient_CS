@@ -1,6 +1,5 @@
 using System;
 using CoAP;
-using Google.Protobuf;
 using System.Collections.Generic;
 
 namespace LEDBridge
