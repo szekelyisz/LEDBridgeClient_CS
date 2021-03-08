@@ -7,17 +7,14 @@ namespace LEDBridge
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Starting...");
             Client client = new Client();
+
             client.DeviceDiscovered += DeviceDiscovered;
             client.GroupDiscovered += GroupDiscovered;
 
             client.discover();
-            Console.WriteLine("Query sent");
 
             Task.Delay(System.Threading.Timeout.Infinite).Wait();
-
-            // Console.WriteLine("Done.");
         }
 
         static void DeviceDiscovered(object sender, Device device)

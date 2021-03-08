@@ -34,7 +34,6 @@ namespace LEDBridge
             {
                 // NON requests never time out
                 System.Diagnostics.Debug.Assert(eventargs.Response != null);
-                // Console.WriteLine(CoAP.Util.Utils.ToString(e.Response));
 
                 try
                 {
